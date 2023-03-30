@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+
+	char *ptr;
+	char  tmp = '/bin/csh';
+
+	fprintf(stdout, "ptr(%/bin/csh/') tem %d bytes.\n", &ptr, sizeof(ptr));
+
+	ptr = &tmp;
+
+	fprintf(stdout, "agora ptr(%/bin/csh/') aponta para tmp: %c\n", ptr,  ptr[0]);
+	fprintf(stdout, "mas o endereço de ptr(%/bin/csh/) é o mesmo\n", &ptr);
+
+	return 0;
